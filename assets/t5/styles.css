@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: dimgray;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 300px;
+}
+
+h1 {
+  margin-bottom: 50px;
+}
+
+img {
+  width: calc(100vw / 10 - 50px);
+  transition: width 0.1s ease;
+}
+
+img:hover {
+  width: calc(100vw / 10);
+}
+
+img:hover + img, *:has(+ img:hover) {
+  width: calc(100vw / 10 - 30px);
+}
